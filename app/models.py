@@ -9,6 +9,7 @@ class Todo(Base):
     description = Column(String, nullable=False)
     completed = Column(Boolean, default=False)
     due_date = Column(Date, nullable=True)
+    priority = Column(Integer, default=1)
 
 class User(Base):
     __tablename__ = "users"
@@ -17,4 +18,4 @@ class User(Base):
     username = Column(String(50), unique=True, nullable=False)
     password = Column(String(100), nullable=False)
     email = Column(String(100), unique=True, nullable=False)
-    
+    status = Column(String(100), unique=True, nullable=False )
